@@ -1,0 +1,23 @@
+<form method="post" id="{{ _form }}">
+
+<p>
+	{"Name"}:<br />
+	<input type="text" name="name" value="{{ name|quotes }}" />
+	<span class="notice" id="name-notice">{"Please enter a name."}</span>
+</p>
+
+<p>
+	{"Email"}:<br />
+	<input type="text" name="email" value="{{ email|quotes }}" />
+	<span class="notice" id="email-notice">{"Please enter a valid email address."}</span>
+</p>
+
+<p>
+	{"Phone"}:<br />
+	<input type="text" name="phone" value="{{ phone|quotes }}" />
+	<span class="notice" id="phone-notice">{"Please enter a phone number."}</span>
+</p>
+
+<p><input type="submit" value="{"Save Contact"}" /></p>
+
+</form>

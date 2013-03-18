@@ -1,4 +1,4 @@
-create table contacts (
+create table #prefix#contacts (
 	id integer primary key,
 	name char(48) not null,
 	email char(48) not null,

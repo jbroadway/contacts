@@ -3,7 +3,7 @@
 $this->require_admin ();
 
 $page->layout = 'admin';
-$page->title = i18n_get ('Add Contact');
+$page->title = __ ('Add Contact');
 
 $form = new Form ('post', $this);
 
@@ -18,7 +18,7 @@ echo $form->handle (function ($form) {
 
 	if ($contact->error) {
 		// Failed to save
-		$form->controller->add_notification (i18n_get ('Unable to save contact.'));
+		$form->controller->add_notification (__ ('Unable to save contact.'));
 		return false;
 	}
 
@@ -26,7 +26,7 @@ echo $form->handle (function ($form) {
 	Versions::add ($contact);
 
 	// Notify the user and redirect on success
-	$form->controller->add_notification (i18n_get ('Contact added.'));
+	$form->controller->add_notification (__ ('Contact added.'));
 	$form->controller->redirect ('/contacts/admin');
 });
 

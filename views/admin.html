@@ -15,8 +15,8 @@
 		<td>{{ loop_value->phone }}</td>
 		<td>
 			<a	href="/contacts/edit?id={{ loop_value->id }}">{"Edit"}</a> |
-			<a	href="/contacts/delete?id={{ loop_value->id }}"
-				onclick="return confirm ('{"Are you sure you want to delete this contact?"}')">{"Delete"}</a>
+			<a	href="/contacts/delete" data-id="{{ loop_value->id }}"
+				onclick="return $.confirm_and_post (this, '{"Are you sure you want to delete this contact?"}')">{"Delete"}</a>
 		</td>
 	</tr>
 {% end %}

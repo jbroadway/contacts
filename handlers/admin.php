@@ -3,7 +3,7 @@
 $this->require_admin ();
 
 $page->layout = 'admin';
-$page->title = i18n_get ('Contacts');
+$page->title = __ ('Contacts');
 
 // Calculate the offset
 $limit = 20;
